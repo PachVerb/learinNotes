@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>flex</title>
+	<style>
+		.div1{
+			width:100px;
+			height:100px;
+			background-color:red;
+			display: inline-flex;
+		}
+		.div2{
+			width:100px;
+			height:100px;
+			background-color:red;
+			display: flex;
+			margin-bottom:5px;
+		}
+	</style>
+</head>
+<body>
+	<h1>display:inline-flex</h1>
+	<div class="div1">1</div>
+	<div class="div1">2</div>
+	<div class="div1">3</div>
+	<div class="div1">4</div>
+	<hr>
+	<h1>display:flex</h1>
+	<div class="div2">1</div>
+	<div class="div2">2</div>
+	<div class="div2">3</div>
+	<div class="div2">4</div>
+
+	<script>
+		let box = document.getElementById('box');
+		let boxStyle = getComputedStyle(box);
+		let width = boxStyle.width,
+			height = boxStyle.height;
+
+		console.log(height);
+		console.log(width);
+
+	</script>
+</body>
+</html>

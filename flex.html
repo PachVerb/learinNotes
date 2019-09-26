@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>flex</title>
+	<style>
+		span{
+			display:inline-flex;
+			background-color:red;
+		}
+		div{
+			display: flex;
+			background-color:blue;
+		}
+		ul{
+			display: flex;
+			list-style: none;
+			/*overflow:hidden;*/
+		}
+		ul li{
+			float:left;	
+			width:100px;
+			height:100px;
+			margin-right:5px;
+			background-color:red;
+		}
+		ol{
+			display:flex;
+			padding:10px;
+			border:1px red solid;
+
+		}
+		ol li{
+			width:100px;
+			height:100px;
+			background:#58a;
+			margin-right:5px;
+		}
+		
+	</style>
+</head>
+<body>
+	<h1>Flex 布局，可以简便、完整、响应式地实现各种页面布局。</h1>
+	<hr>
+	<span>display:inline-flex</span>
+	<span>display:inline-flex</span>
+	<span>display:inline-flex</span>
+	<span>display:inline-flex</span>
+
+	<div>display:flex</div>
+	<hr>
+		<h3>设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。</h3>
+	<ul>
+	    <li>1</li>
+	    <li>1</li>
+	    <li>1</li>
+	    <li>1</li>
+	    <li>1</li>
+	    <li>1</li>
+	</ul>
+	<hr>
+	<p>容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end；交叉轴的开始位置叫做cross start，结束位置叫做cross end。</p>
+	<h1>容器属性</h1>
+	<ol>
+	    <li>1</li>
+	    <li>1</li>
+	    <li>1</li>
+	    <li>1</li>
+	    <li>1</li>
+	    <li>1</li>
+	    <li>1</li>
+	    <li>1</li>
+	    <li>1</li>
+	    <li>1</li>
+	    <li>1</li>
+	    <li>1</li>
+	</ol>
+	<h1>容器属性</h1>
+	<div class="flex-direction">
+		<ul>
+		    <li></li>
+		    <li></li>
+		    <li></li>
+		    <li></li>
+		</ul>
+	</div>
+</body>
+</html>
