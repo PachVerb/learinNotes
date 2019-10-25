@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script>
+		let myobject = {
+			a:2
+		}
+
+
+		// function create(proto){
+		// 	function f(){}
+
+		// 	f.prototype = proto
+
+		// 	return new f()
+		// }
+
+		// let my_object = create(myobject)
+
+		// console.log(my_object.a)//2
+		// console.log(my_object.__proto__ === myobject)//true
+		// console.log(create.prototype.__proto__)
+		function create(proto,options){
+			let obj ={};
+
+			obj.__proto__ = proto;
+
+			if(options == null){
+				return obj
+			};
+
+			return Object.defineProperties(obj,options)
+		}
+		console.log(Object.prototype)
+	</script>
+</body>
+</html>

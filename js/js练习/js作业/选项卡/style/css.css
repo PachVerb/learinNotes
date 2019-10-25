@@ -1,0 +1,30 @@
+.content a{
+    display: inline-block;
+    width:49%;
+    height:50px;
+    text-decoration: none;
+    color:yellowgreen;
+    background-color:green;
+    text-align:center;
+    line-height:50px;
+}
+.btn1{
+    float:left;
+}
+.btn2{
+    float:right;
+}
+.content{
+    width:600px;
+    height:450px;
+    margin:100px auto 0;
+}
+.picture img{
+    display:none;
+}
+.btn1:hover + .btn2 + .picture > .img1{
+    display:block;
+}
+.btn2:hover + .picture > .img2{
+    display:block;
+}

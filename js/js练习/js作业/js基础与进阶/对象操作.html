@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        /* 
+        
+            []使用情况正对以下，
+                属性名不确定，既是属性名存储在变量里面
+                非法命名属性，属性名带 “-”
+
+         */
+
+         var obj = {
+             name:"王山"
+         }
+         obj["obj.age-love"] = "30/ball";
+         console.log( obj["obj.age-love"]);
+    </script>
+</body>
+
+</html>

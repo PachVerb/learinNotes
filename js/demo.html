@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border='1' width = '20px' height = '20px' id = 'table'>
+        <tr class='cows1'>
+            <td>1X2</td>
+            <!-- <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td> -->
+        </tr>
+        <tr class='cows2'>
+            <th>2</th>
+            <td>2</td>
+        </tr>
+        <tr class='cows3'>
+            <th>3</th>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr class='cows4'>
+            <th>4</th>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr class='cows5'>
+            <th>5</th>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr class='cows6>
+            <th>6</th>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr class='cows7'>
+            <th>7</th>
+            <td>2</td>
+            <td>3</td>
+            <td>3</td>
+            <td>4</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr class='cows8'>
+            <th>8</th>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>3</td>
+            <td>4</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr class='cows9'>
+            <th>9</th>
+            <td>3</td>
+            <td>4</td>
+            <td>3</td>
+            <td>4</td>
+            <td>3</td>
+            <td>4</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+    <script>
+        var index = null;
+        var Arry = [""];
+        var All = null;
+        var h2 = document.createElement("h2");
+        var Table = document.getElementById("table");
+        var cows = table.getElementsByTagName('tr');
+        var td = cows.getElementsByTagName('td');
+        // var oDiv = document.getElementsByTagName('div')[0];
+        // oDiv.appendChild(h2);
+
+        for(var i = 1 ; i <= 9; i++){
+            for(var m =1; m <= i; m++){
+                index = i * m;
+                //每次循环变量更新
+                All = i + "X" + m + "=" + index + "&nbsp";8
+                
+                // alert(All);
+                //Arry.push(All); 
+                // console.log(Arry[80]);
+                //document.write(All)
+                document.write(All);
+
+            }
+            //document.write(Arry);
+            document.write("<br/>");
+        }
+        
+        // for(i=1;i<=9;i++){
+
+        //     for(j=1;j<=9;j++){
+
+        //         document.write (i+"X"+j+"="+i*j + "&nbsp");
+        //         if(i==j) 
+        //         //break
+        //         {document.write ("<br/>");break;}  //用的if语句，如果这两个数字相同了 那么跳出，另起一行
+            
+        //     }
+        // }
+
+    </script>
+</body>
+
+</html>

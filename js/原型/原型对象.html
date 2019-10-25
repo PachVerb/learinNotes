@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script>
+
+		function Person(first, last, age, gender, interests) {
+			this.first = first;
+			this.last = last;
+			this.age = age;
+			this. gender =  gender;
+			this.interests = interests;
+		}
+
+		Person.prototype.foo = 'hel'
+		let person1 =  new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+
+		//对象本身
+		console.log(person1);
+		//对象的原型对象
+		console.log(person1.__proto__,1)
+		console.log(person1.__proto__.__proto__,0)
+		//函数私有属性，prototype里面包含了通过它构造得到实列对象所继承的属性方法成员，为公共的。
+		console.log(Person.prototype,2);
+
+		console.log(Person.__proto__,3)
+		console.log(Person.__proto__.__proto__)//Object.prototype
+
+		//对象关联
+		let myObject = {
+			a:2
+		}
+
+		let obj = {
+			b:4
+		}
+
+		myObject.__proto__ = obj
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+		console.log(myObject)
+	</script>
+</body>
+</html>

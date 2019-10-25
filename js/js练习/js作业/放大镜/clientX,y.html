@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //该事件的本质就是一个函数,而该函数的形参接收一个event对象.
+        var oTil = document.querySelector("title");
+        document.onmouseenter= function(e){
+            var _e = window.event || e; 
+            oTil.innerHTML = _e.clientX;
+           // console.log(,_e.clientY);
+        }
+    </script>
+</body>
+
+</html>

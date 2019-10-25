@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script>
+		function output(val,val1,val2){
+			console.log(val,val1,val2)
+		}
+
+		class Vehicle {
+			constructor(){
+				this.engines = 1
+			}
+
+			ignition() {
+				output('Truning on my engine.')
+			}
+
+			drive() {
+				ignition();
+				output('steering and moving forward!')
+			}
+		}
+
+		class Car extends Vehicle {
+			wheels = 4
+
+			constructor() {
+				super()
+			}
+
+			drive() {
+				super.dirve()
+				output('Rolling on all',this.wheels,'wheels')
+			}
+		}
+
+		class SpeedBoat extends Vehicle {
+			constructor(){
+				super()
+				this.engines = 4
+			}
+
+			ignition() {
+				output('Truning on my',this.engines,"engines")
+			}
+
+			pilot() {
+				super.drive();
+				output("speeding through the water with ease!")
+			}
+		}
+
+		let boat = new SpeedBoat();
+		let car = new Car()
+
+		boat.ignition()
+		car.drive()
+
+		//super()表示调用父类的构造函数
+	</script>
+</body>
+</html>

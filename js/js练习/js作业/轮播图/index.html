@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/css.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        
+        实现方法：display/opacity/visibility状态切换
+
+    -->
+    <!-- 基本布局 -->
+    <div class="checkBox">
+            <span class = 'open'>循环播放</span>
+            <span>单边切换</span>
+    </div>
+    <div class="warp" id='warp'>
+        <!-- 轮播区 -->
+        <div class="img" id='pic'>
+            <img class='active' src="images/1.jpg" width='400' height='400' alt="">
+            <img src="images/2.jpg" width='400' height="400" alt="">
+            <img src="images/3.jpg" width='400' height='400' alt="">
+            <img src="images/4.jpg" width='400' height='400' alt="">
+            <img src="images/5.jpg" width='400' height='400' alt="">
+        </div>
+        <!-- 左右切换按钮 -->
+        <div class='preandNext'>
+            <i class='pre-Left floatPreL'>&lt;</i>
+            <i class='pre-Right floatPreR'>&gt;</i>
+        </div>
+        <!-- //按钮组 -->
+        <div class='btn-grounp' id = 'btn'>
+            <a href="javascript:;">1</a>
+            <a href="javascript:;">2</a>
+            <a href="javascript:;">3</a>
+            <a href="javascript:;">4</a>
+            <a class='on' href="javascript:;">5</a>
+        </div>
+        <p class = 'pBox top'>
+            <span>1</span>/5
+        </p>
+        <p class = 'pBox bottom'>A</p>
+    </div>
+    <script src = 'js/conrol.js'></script>
+</body>
+</html>

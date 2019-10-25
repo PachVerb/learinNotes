@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script src='/es6/grammar/polyfill.js'></script>
+</head>
+<body>
+
+    <!-- <script>
+        //异步获取X
+        function fetchX(x){
+            return new Promise((res,rej) => {
+                setTimeout(function(){
+                    x(20);
+                },20);
+                res()
+            })
+           
+        };
+
+        //异步获取Y
+        function fetchY(y){
+            setTimeout(function(){
+                y(40);
+            },4000);
+        }
+
+        function add(getX,getY,sum){
+            var x,y;
+            getX(function(xval){
+                x = xval;
+                if(y != undefined){
+                    sum(x+y);
+                }
+            });
+        
+            getY(function(yval){
+                y = yval;
+                if(y != undefined){
+                    sum(x+y);
+                }
+            });
+        }
+
+        // add(fetchX, fetchY, function(sum){
+        //     console.log(sum);
+        // });
+        
+    </script> -->
+</body>
+</html>

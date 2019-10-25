@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<div>
+		<ul>
+		    <li></li>
+		    <li></li>
+		    <li></li>
+		</ul>
+	</div>
+	<script src="promise封装.js"></script>
+	<script src="jquery.js"></script>
+	<script>
+		let oLis = document.getElementsByTagName('li')[0];
+
+		function createPromise(url){
+			return new Promise(function (res,rej){
+				$.ajax({
+					url,
+					dataType:'json',
+					success(data){
+						res(data);
+					},
+					error(err){
+						rej(err);
+					}
+				});
+			});
+		};
+
+		createPromise('../data/a.json').then(function(data){
+			console.log(JSON.stringify(data));
+			for(var key in data){
+				oLis.innerHTML = data[key];
+			}
+		},function(err){
+			throw err;
+		})；
+
+		Promise.all([
+			$.ajax({url:''})
+			])
+	</script>
+</body>
+</html>

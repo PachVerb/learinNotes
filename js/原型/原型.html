@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script>
+		var myObect = {};
+		myObect.a//undefined
+		var anotherObject = {
+			a:2,
+			b:3,
+
+			foo:function(){
+				console.log('anotherObject')
+			}
+		};
+		console.log(anotherObject.a)//2
+
+		//如果myObject上没有某属性，那么该如何处理
+		//如下可以解决
+		//关联某对象
+		var myObect = Object.create(anotherObject)
+		//console.log(myObect.a,1)//2,1
+
+		//和for in 查找和遍历对像类似，同样会查找原型链。使用 in 查找原型链查找的属性都会被枚举.
+
+		for(var k in myObect){
+			console.log(k)
+		}
+		console.log(myObect)//a
+
+		/*
+			所有普通对象都源于Object.prototype内置对象Object原型对象。他是整条原型链的顶端
+
+			原型及原型链作用：属性查找，以及继承。
+		*/
+
+	</script>
+</body>
+</html>

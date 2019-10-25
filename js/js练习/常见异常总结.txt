@@ -1,0 +1,15 @@
+路径不写页面控制台会报下面的错误
+
+	TypeError: Identifier 'XXXX' has already been declared 
+	错误原因重复声明变量
+
+	常见es6 let ，const 声明变量后的重复值
+
+	Cannot convert object to primitive value
+
+	不能将对象转化为原始值
+
+Uncaught TypeError: (intermediate value)(...) is not a function；
+表达式结尾没有上分号
+
+通过表达式定义的函数，结束要加上分号。

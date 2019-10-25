@@ -1,0 +1,29 @@
+*{
+    margin:0;
+    padding:0;
+}
+ul {
+    list-style-type: none;
+}
+ul li{
+    width:50%;
+    height:50px;
+    background-color: coral;
+    float:left;
+    text-align:center;
+    line-height:50px;
+    
+}
+ul::after{
+    content:'';
+    display:block;
+    clear:both;
+}
+.tab{
+    width:600px;
+    height:450px;
+    margin:100px auto 0;
+}
+.on{
+    background-color:greenyellow;
+}

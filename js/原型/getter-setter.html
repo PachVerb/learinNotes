@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script>
+		// var myObject = {
+		// 	a:2
+		// }
+		// console.log(myObject.a)//2 可以获取
+		// //属性描述符，检测属性
+
+		// //获取属性得检测特性，getOwnPropertyDescriptor()
+		// console.log(Object.getOwnPropertyDescriptor(myObject,'a'));
+
+		// //修改属性检测特性，defineProperty(),显示
+
+		// Object.defineProperty(myObject,'a',{
+		// 	writable:true,
+		// 	configurable:true,
+		// 	emuerbale:true
+		// })
+
+		// myObject.a = 4;//4 修改默认属性成功
+
+		// console.log(myObject.a)
+
+		// 属性访问细节，getter,setter获取设置属性值.
+
+		//添加属性,隐式
+		let shareObject = {
+			get a(){
+				return this.b
+			}
+			// set a(val){
+			// 	this.b = val*2
+			// }
+		}
+		//显示修改已有属性值
+		Object.defineProperty(shareObject,'a',{
+			set: function(val){
+				this.b = val * 2
+			},
+			writable:false
+		})
+		shareObject.a = 4//这里更改a值无效,会忽略默认得set操作.因为get返回1,此时得set操作无意义.
+		console.log(shareObject.a)//1,此处得属性值,来自get得返回,返回值会作为属性访问值.
+
+			/*get设置一个属性,但是是没有值得.属性值是get隐形函数得返回值,这个过程会执行默认put操作.
+			如果需要静态添加属性,可以设置中间量.返回常量得话,且属性设置了set,静态修改无效.  set的添加,会覆盖默认得put操作.
+		*/
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var a ="返回函数";
+        var f = (function(a){
+        var f, g;
+        if (true) {
+        f = function g(){};
+        }
+        else {
+        f = function g(){};
+        }
+        // 设置g为null以后它就不会再占内存了
+        g = null;//g在函数返回时一直占用内存
+        return f;
+        alert(a)
+    })();
+    
+    console.log(f());
+
+    </script>
+</body>
+
+</html>

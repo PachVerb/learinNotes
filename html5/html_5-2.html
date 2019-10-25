@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<meta name=description content="">
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<title></title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			div{
+				float:left;
+				width:100px;
+				height:300px;
+				background-color:red;
+
+			}
+			ul{
+				float:right;
+			}
+			ul>li{
+				list-style:none;
+				width:100px;
+				height:50px;
+				border: solid;
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="left"></div>
+		<ul id='list'>
+		    <li>1</li>
+		    <li>2</li>
+		    <li>3</li>
+		    <li>4</li>
+		    <li>5</li>
+		</ul>
+		<script>
+			//e.dataTransfer.setData()//设置拖动的数据键和值。
+			let oLi = document.querySelectorAll('li');
+			let List = document.getElementById('list');
+			//for 或者数组forEach遍历
+			oLi.forEach((item,index) => {
+				item.setAttribute('draggable','true')
+				//console.log(index)
+				item.ondragstart = function(ev){
+					let dt = ev.dataTransfer.setData('key',index)//设置数值数据
+					console.log(dt)
+				}
+			})
+			//目标元素设置事件
+			left.ondragenter = function(){
+				this.innerHTML = '请放置内容此区域'
+			};
+			left.ondragover = function(ev){
+				ev.preventDefault();
+				ev.stopPropagation();
+			};
+			left.ondrop = function(ev){
+				let dt = ev.dataTransfer.getData('key');
+				console.log(dt)
+				List.removeChild(oLi[dt])
+			}
+		</script>
+	</body>
+</html>

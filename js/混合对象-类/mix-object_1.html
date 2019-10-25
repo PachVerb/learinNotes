@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script>
+		
+		
+		//模拟类操作，混入，实现对象复制。
+		// function mixin(sourceObj,targetObj){
+		// 	//这里的key依次遍历源对象的属性方法
+		// 	for(var key in sourceObj){
+		// 		if(!(key in targetObj)){
+		// 			targetObj[key] = sourceObj[key];
+		// 		}
+		// 	}
+		// 	return targetObj;
+		// }
+
+		// var Vehicle = {
+		// 	engines: 1,
+
+		// 	ignition: function(){
+		// 		console.log('turn on my engines');
+		// 	},
+
+		// 	drive: function(){
+		// 		this.ignition();
+		// 		console.log('steering and moving forward!');
+		// 	}
+		// };
+
+		// var Car = mixin(Vehicle,{
+		// 	wheels: 4,
+
+		// 	dirve: function(){
+		// 		/*
+		// 			这里是绝对引用，目标对象和源对象相同方法，适用于es5.到了es6可以使用相对多态，既是继承
+					
+		// 		*/
+		// 		Vehicle.drive.call(this);
+		// 		console.log('rolling on all' + this.wheels + 'wheels!');
+		// 	}
+		// });
+		// // 混入对象赋值
+		// console.log(Car.wheels);//4
+		// console.log(Car.engines)//1
+		// console.log(Car.ignition())//'turn on my engines'
+		// console.log(Car.dirve())
+
+		// class Vehicle {
+		// 	engines=1
+
+		// 	ignition(){
+		// 		console.log('turn on my engines');
+		// 	}
+
+		// 	drive(){
+		// 		this.ignition(2);
+		// 		console.log('steering and moving forward!');
+		// 	}
+		// };
+
+		// class Car extends Vehicle {
+		// 	wheels=4
+
+		// 	dirve(){
+		// 		//inherited:drive()
+		// 		//如果需要调用父级方法，可以super
+		// 		super.drive()
+		// 		console.log(1)
+		// 	}
+		// }
+		// var car = new Car()
+		// var vehicle = new Vehicle()
+		// //vehicle.drive()
+		// console.log(car.dirve());//.'steering..., '
+		// console.log(car.ignition())//这个方法实际实在car.prototype上添加Vehicle.prototype
+
+
+
+		/*
+			//console.log()打印object属性以及值
+			面向对象编程，实际是对数据和数据操作行为的一系列代码封装。
+			通常不关注数据形式，而是如何对数据应用，所以产生一些方法，对数据操作。比如String，Math,Date等一系列对象的方法。
+		/*
+			类设计模式：
+				通过面向对象设计模式，比如迭代器模式，单列模式，工厂模式。来组织高级代码，其实这个过程即是对面向类的。当然也就是类设计模式，他是代码高级抽象。除了这种，还有其他设计模式。比如函数式编程可选。
+			
+			js中，没有类的语法。前后出现实现近似类的语法元素，new,class. tu类是一种设计模式，在js中可以通过函数实现一些近似类功能。但其实，并不是真正的类。和java中的类有区别。js类的语法糖广泛使用，掩盖了这个事实。
+
+		*/
+		function Foo(){
+			console.log('我是foo类');
+		}
+
+		Foo.prototype.con = function(){
+			console.log('我是原型方法')
+		}
+
+		let a = new Foo()
+		//a.con();
+		/*
+			javascript中的类和实列理解可以借鉴房屋建造。
+
+			类就是工程图，实列就是物理建筑。类和实列间接联系。
+			总的来说，要想获取可以操作交互对象，就必须通过类来构造（就是实列化）实列。
+
+			类通过复制操作实例化为对象的形式。
+
+			实列化对象方法：
+
+				构造函数，类实列化是一个由特殊的类方法构造成，这个方法和类名相同，亦为构造函数。
+
+				作用：这个方法用来初始化实列所需要的信息。
+			
+		*/
+		*/
+	</script>
+</body>
+</html>

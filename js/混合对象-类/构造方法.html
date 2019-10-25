@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script>
+			
+		function output(){
+
+		}
+
+		class CoolGuy {
+			//specialTrick = trick;
+
+			CoolGuy( trick ) {
+				specialTrick = trick;
+			}
+
+			static showOff() {
+				output( 'Here\'s my trick:', specialTrick )
+			}
+		}
+
+		joe = new CoolGuy('jumping rope')
+
+		//joe.showOff()
+
+		//CoolGuy.showOff();
+
+		//类静态属性，方法
+
+		//通过static关键字为Foo类，添加classMethod静态方法，实列对象无法继承。
+		class Foo {
+			//es6实列属性写法
+			constructor () {
+				this.ballname = 'football';
+			}
+
+			//es7实列属性
+			ball_star = 'backhanm'
+
+			//es7静态属性写法
+
+			static carname = 'BYD'
+
+			static classMethod () {
+				return 'hello'
+			}
+			//对于实列属性在constructor声明了的，可以直接列出
+			ballname;
+		}
+
+		console.log(Foo.classMethod());//hello
+
+		let foo_object = new Foo();
+
+		//foo_object.classMethod();//classMethod is not a function
+		//通过此列发现，实列对象没有继承类的静态方法。但是子类可以继承此方法。
+
+		//字类继承父类静态方法。
+		class Bar extends Foo {}
+
+		console.log(Bar.classMethod());//hello
+
+		//静态属性
+		//通过类名加 . 方法定义，class.propname目前， 只有这种写法可行， 因为 ES6 明确规定， Class 内部只有静态方法， 没有静态属性。
+
+		//es6静态属性写法
+
+		Foo.name = 'jack'
+
+		//es6中静态属性，是在类的声明外。es7提案规定了新的写法。另外实列属性也有变化。es7实列属性，可以在内部以等式形式出现
+
+		//es7静态属性写法，直接在属性前面加上static.
+
+		//es6，调用
+		console.log(foo_object.ballname,6)//football
+		//es7，调用
+		console.log(foo_object.ball_star,7)
+
+		//静态属性测试
+
+		console.log(Foo.carname,77);
+
+		console.log(Foo.name,66)
+
+
+
+	</script>
+</body>
+</html>

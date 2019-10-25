@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script>
+		function foo(){
+			this.a = 1
+		}
+		foo.prototype.getName = function(){
+			console.log('shanshan')
+		} 
+		let obj = new foo()
+		
+
+		console.log(foo.prototype,1)//foo
+
+		// console.log(foo.prototype.__proto__)//-->Object
+		// console.log(Object.prototype)//true
+		// console.log(foo.prototype.__proto__ === Object.prototype)
+
+		console.log(foo.__proto__,22)//-->Function.prototype
+		// console.log(Function.prototype === foo.__proto__)//true
+
+		console.log(obj.__proto__)
+		console.log(foo.prototype)//-->foo
+		console.log(foo.prototype === obj.__proto__)//true
+
+		/*
+			总结：
+				1、函数的__pro to__ 指向Function.protoype，原型对象的__proto__指向Object.prototype的。字面量和 new出来的实例对象 ，指向其构造函数（谁 new 出来的）的prototype， Object.create 创建的对象呢，就是上面说的，你给它谁，它就指向谁。
+
+
+				2、除了Object.create创建的对象的__proto__指向你给定的，原型对象的__proto__指向Object.prototype，其他的__proto__ 都是指向其构造函数的原型对象。（你要是看懂了上面的new的实现，就应该明白为啥了。 ）
+
+				第二点注意：所有函数都是 构造函数 Function 创建出来的，所以，函数的构造函数 就是 Function。
+		*/
+
+		console.log(obj,00000)
+
+		
+	</script>
+</body>
+</html>

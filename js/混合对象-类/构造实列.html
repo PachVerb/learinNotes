@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script>
+		//类通过复制实列化为对象的形式
+		//类构造函数属于类
+		let specialTrick = null
+		class CoolGuy {
+			/*
+				constructor构造函数默认被创建，是类的默认方法，如果没有别显示添加。默认也会被添加一个空的constructror方法。而且自动调用
+			*/
+			// constructor(){
+			// 	console.log('我是类默认构造方法')
+			// }
+			CoolGuy(trick){
+				specialTrick = trick
+				console.log(specialTrick,1)
+			}  
+
+			showOff(){
+				console.log("here's my trick:",specialTrick)
+			}
+		}
+
+		let obj = new CoolGuy('basketball');
+
+		obj.showOff();
+
+		//es类的继承
+		/*
+			
+		*/
+	</script>
+</body>
+</html>

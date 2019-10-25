@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script>
+		function Foo(name){
+			this.name = name
+		}
+
+		//替换默认对象引用
+		Foo.prototype = { 
+
+		}
+
+		let obj = new Foo('tome')
+
+		//现在调用之前默认的constructor属性，已经无效。因为默认的原型对象已经改变。这里要说明的问题是，不要把某对象的constructor构造引用，表示此对象由此构造构建，因为这样很容易产生误解。很多时候需要考虑属性委托.既是对象继承,比如如下.实际来说,obj并不是由Object构造.而是这里的Foo
+		console.log(obj.constructor === Object)//truc  
+		console.log(obj.constructor === Foo)//false
+		console.log(obj.__proto__);
+</body>
+</html>
