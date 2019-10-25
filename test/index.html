@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>get方式</h1>
+    <form action="http://127.0.0.1:8080/server.js" method="get">
+        账号： <input type="text" name="user"><br>
+        密码：<input type="password" name="pwd"><br>
+        <input type="submit" value="submit">
+    </form>
+    <hr>
+    <div>
+        <h1>post,数据在消息主体部分，数据容量高达1G。数据分段发送</h1>
+        <form action="http://127.0.0.1:80/server-1.js" method="post">
+            账号： <input type="text" name="user"><br>
+            密码：<input type="password" name="pwd"><br>
+            <textarea name="textcontent" id="" cols="100" rows="10"></textarea>
+                &nbsp;<p><input type="submit" value="submit"></p>
+        </form>
+    </div>
+</body>
+</html>
