@@ -1,0 +1,24 @@
+{
+  "name": "moudle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./src/1_1.js",
+    "rn": "babel-node src/2.js",
+    "ex": "node src/entry.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/node": "^7.7.4",
+    "@babel/plugin-transform-modules-amd": "^7.7.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.7.4",
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/register": "^7.7.4"
+  },
+  "dependencies": {}
+}

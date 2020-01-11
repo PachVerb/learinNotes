@@ -1,0 +1,13 @@
+{
+    "status": "ok",
+    "msg": [
+        {
+            "name": "tom",
+            "like": "swiming"
+        },
+        {
+            "name": "jack",
+            "like": "ribe bike"
+        }
+    ]
+}

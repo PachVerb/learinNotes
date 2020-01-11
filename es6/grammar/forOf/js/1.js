@@ -51,4 +51,3 @@ var o = {};
 for({x:o.a} of [{x:1},{x:2},{x:3}]){
     console.log(o.a);   //1,2,3
 }
-

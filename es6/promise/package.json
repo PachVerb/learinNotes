@@ -1,0 +1,11 @@
+{
+  "name": "promise",
+  "version": "0.0.1",
+  "description": "",
+  "main": "generator.js",
+  "scripts": {
+    "test": "node generator.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,5 +1,5 @@
 //构造生成器函数,写法：*结合function或者函数名结合
-//创建 y7i无法直接调用。此时函数的返回是一个构造生成器对象。
+//创建的generator函数，无法直接调用。此时函数的返回是一个构造生成器对象。
 // function *generator(c){
 // 	console.log('a');
 // 	console.log(c);
@@ -21,7 +21,7 @@ function * show(){
 
 	yield 12;	//这里是吧首次执行结果返回
 
-	console.log('end');
+	console.log('end')
 
 	return 12;
 
