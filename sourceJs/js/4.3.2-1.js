@@ -12,7 +12,7 @@ console.log("---------")
 console.log(parseInt(a)) // 42
 
 console.log(parseInt(0.000008));   //0
-console.log(parseInt(0.0000008));   // 
+console.log(parseInt(0.0000008));   // 8
 console.log(parseInt(false, 16));
 console.log(parseInt(parseInt, 16));
 
